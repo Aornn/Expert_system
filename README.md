@@ -5,22 +5,22 @@ Exemple of file :
 
 >B => A 
 
-D + E => B 
+>D + E => B 
 
-G + H => F 
+>G + H => F 
 
-I + J => G 
+>I + J => G 
 
-G => H 
+>G => H 
 
-L + M => K 
+>L + M => K 
 
-O + P => L + N 
+>O + P => L + N 
 
-N => M 
+>N => M 
 
-=DEIJOP
+>=DEIJOP
 
-#[INITIAL FACTS HERE] 
+>#[INITIAL FACTS HERE] 
 
-?AFKP 
+>?AFKP 
