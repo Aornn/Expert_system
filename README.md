@@ -1,6 +1,6 @@
 # Expert_system
-Launch "python basic.py filename"
-Exemple of file :
+Launch "python basic.py filename" \n
+Exemple of file : \n
 >B => A 
 D + E => B 
 G + H => F 
