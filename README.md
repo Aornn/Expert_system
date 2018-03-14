@@ -13,9 +13,11 @@ G => H
 L + M => K 
 O + P => L + N 
 N => M 
-=DEIJOP
 #[INITIAL FACTS HERE] 
+=DEIJOP
+#[VALUE OF ...] 
 ?AFKP
 ```
 
+![alt text](https://raw.githubusercontent.com/Aornn/Expert_system/master/Screen_shot.png)
  
