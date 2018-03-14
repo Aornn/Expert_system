@@ -1,7 +1,6 @@
 import sys
 import re
 from color_print import *
-
 def solve_npi(postfix, knowledge):
     stack = []
     var_not= []
@@ -71,8 +70,10 @@ def npi(exp, knowledge):
         postfix.append(stack.pop())
     return solve_npi(postfix, knowledge)
 
-def bckw(equations, knowledge, key):
+def bckw(equations, knowledge, key):   
     for elem in equations[key]:
+        ret = 0
+        print '{0: <52}'.format(str(''.join(elem)) + "=>" + str(key))
         for i, char in enumerate(elem):
             if char.istitle():
                 if char in equations and char != key:
@@ -83,24 +84,25 @@ def bckw(equations, knowledge, key):
                     for i , char in enumerate(key):
                         if char.istitle() and key[i-1] == "!":
                             knowledge.add(char)
+                            ret = 1
                 if verif == 1:
                     for i , char in enumerate(key):
                         if char.istitle() and key[i-1] != "!":
                             knowledge.add(char)
+                            ret = 1
+                if ret == 1:
+                     print bcolors.OKGREEN+"\t|"+key+" True|"+bcolors.ENDC
+                else:
+                    print bcolors.FAIL+"\t|"+key+" False|"+bcolors.ENDC
 
-def solve(knowledge, questions, equations):           
+def solve(knowledge, questions, equations):        
     knowledge = set(knowledge)
-    for elem in equations:
-            bckw(equations, knowledge,elem)
     print bcolors.OKBLUE+"\t ======================"
     print "\t|=====ALL RESULTS=====|"
     print"\t ======================\n"+bcolors.ENDC
-    for key in equations:
-        print str(''.join(equations[key])) + "=>" + str(key),
-        if key in knowledge:
-            print bcolors.OKGREEN+"\t\t\t True"+bcolors.ENDC
-        else:
-            print bcolors.FAIL+"\t\t\t False"+bcolors.ENDC
+    for elem in equations:
+        bckw(equations, knowledge,elem)
+        print "___________________________"
     print bcolors.OKBLUE+"\n\t ======================"
     print "\t|===RESULTS REQUESTS===|"
     print"\t ======================\n\n"+bcolors.ENDC

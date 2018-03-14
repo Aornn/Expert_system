@@ -15,7 +15,7 @@ def print_quest_know(knowledge, questions):
 
 #TESTER A+A => A
 def run():
-    if len(argv)  < 2:
+    if len(argv)  < 2 or len(argv) > 2:
         print("No input file")
         sys.exit()
     data = open_file(argv[1])
@@ -33,6 +33,8 @@ def run():
     knowledge = identify_by_char(BC, '=')
     questions = identify_by_char(BC, '?')
     equations = check_equations(BC)
+    if not equations:
+         print bcolors.WARNING+"WARNING : "+bcolors.ENDC+"No equations transmitted"
     print_quest_know(knowledge, questions)
     solve(knowledge, questions, equations)
 run()

@@ -22,6 +22,9 @@ def lex(filecontents):
     comment = ""
     filecontents = list(filecontents)
     filecontents = unify_list(filecontents)
+    if len(filecontents) == 0:
+        print "FILE IS EMPTY"
+        sys.exit(0)
     if (filecontents[len(filecontents)-1] != "\n"):
         print bcolors.FAIL+"FAIL : "+bcolors.ENDC+"The file must be terminated by \'\\n\'"
         sys.exit(0)
@@ -38,4 +41,7 @@ def lex(filecontents):
             tok = ""
             comment = ""
         tok += char
+    if not BC:
+        print "FILE IS EMPTY"
+        sys.exit(0)
     return BC
