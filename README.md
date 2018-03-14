@@ -3,7 +3,8 @@ Launch "python basic.py filename"
 
 Exemple of file :
 
-```ruby
+```shell
+#Commentary
 B => A 
 D + E => B 
 G + H => F 
