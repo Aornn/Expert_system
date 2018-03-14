@@ -20,7 +20,5 @@ Exemple of file :
 >N => M 
 
 >=DEIJOP
-
 >#[INITIAL FACTS HERE] 
-
 >?AFKP 
