@@ -14,7 +14,7 @@ L + M => K
 O + P => L + N 
 N => M 
 #[INITIAL FACTS HERE] 
-=DEIJOP
+=DEIJP
 #[VALUE OF ...] 
 ?AFKP
 ```
