@@ -26,7 +26,7 @@ def run():
     print"| |___>  <| |_) |  __| |  | |_      /\__/ | |_| \__ | ||  __| | | | | | | | (_| \___  ./ /___"
     print"\____/_/\_| .__/ \___|_|   \__|     \____/ \__, |___/\__\___|_| |_| |_|  \ \__,_|   |_\_____/"
     print"          | |                               __/ |                         \____/             "
-    print"          |_|                              |___/  made by rqueverd|hdelaby                   "
+    print"          |_|                              |___/  made by rqueverd                           "
     print""
     print""  
     knowledge = identify_by_char(BC, '=')
