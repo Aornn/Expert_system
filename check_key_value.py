@@ -49,7 +49,7 @@ def check_value(value, elem):
                 print bcolors.FAIL+"SYNTAX 1 ERROR : "+bcolors.ENDC+"\"" + value+"\""
                 sys.exit(0)
         if char in operator:
-             if i < len(value) - 1 and (value[i+1].istitle() == False and value[i+1] != "!"):
+             if i < len(value) - 1 and (value[i+1].istitle() == False and value[i+1] != "!"and value[i+1] != "("):
                 print bcolors.FAIL+"SYNTAX 2 ERROR : "+bcolors.ENDC+"\"" + value+"\""
                 sys.exit(0)
         if char == "!":
@@ -64,8 +64,6 @@ def check_value(value, elem):
             count += 1
         if char == ")":
             if par1 > i or (i < len(value) - 1 and (value[i+1] !="+" and value[i+1] !="|")):
-                print char
-                print value[i+1]
                 print bcolors.FAIL+"SYNTAX 4 ERROR : "+bcolors.ENDC+"\"" + value+"\""
                 sys.exit(0)
             count += 1

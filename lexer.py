@@ -29,8 +29,8 @@ def lex(filecontents):
         print bcolors.FAIL+"FAIL : "+bcolors.ENDC+"The file must be terminated by \'\\n\'"
         sys.exit(0)
     for i, char in enumerate(filecontents):
-        if char == '#':
-            while (filecontents[i]!= '\n') and (i < len(filecontents) -1):
+        if char == '#' and not comment:
+            while (filecontents[i] != '\n') and (i < len(filecontents) -1):
                 comment += filecontents[i]
                 i += 1
         if char == "\n" or i == len(filecontents):

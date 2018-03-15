@@ -13,7 +13,6 @@ def print_quest_know(knowledge, questions):
     if not knowledge:
         print bcolors.WARNING+"WARNING : "+bcolors.ENDC+"No knowledge transmitted"
 
-#TESTER A+A => A
 def run():
     if len(argv)  < 2 or len(argv) > 2:
         print("No input file")
@@ -27,7 +26,7 @@ def run():
     print"| |___>  <| |_) |  __| |  | |_      /\__/ | |_| \__ | ||  __| | | | | | | | (_| \___  ./ /___"
     print"\____/_/\_| .__/ \___|_|   \__|     \____/ \__, |___/\__\___|_| |_| |_|  \ \__,_|   |_\_____/"
     print"          | |                               __/ |                         \____/             "
-    print"          |_|                              |___/  made by rqueverd                           "
+    print"          |_|                              |___/  made by rqueverd|hdelaby                   "
     print""
     print""  
     knowledge = identify_by_char(BC, '=')
